@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>counter</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: center;
+            gap: 20px;
+            
+        }
+
+        .click:hover{
+            background-color: yellow;
+            border-color: yellow;
+            color: black;
+        }
+
+        .reset:hover{
+            background-color: teal;
+            border-color: teal;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Counter</h1>
+    <div class="container" >
+        <div class="row">
+            <span>{{ session["count"] }}</span>
+        </div>
+        <div class="row">
+            <form action="/add">
+                <button type="submit" class="btn btn-primary click">Click</button>
+                
+            </form>
+            <form action="/reset">
+                
+                <button type="button " class="btn btn-danger reset">Reset</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
