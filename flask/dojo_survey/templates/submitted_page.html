@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        .container{
+            background-color: darkslategray;
+            color: white;
+        }
+    </style>
+    <title>Submitted Form Data</title>
+</head>
+<body>
+    <div class="container">
+        <h1 style="color:blue ; font-size:40px" >Submitted Information</h1>
+        <p class="results">Name: {{name_field}}</p>
+        <p class="results">Dojo Location: {{location_dropdown}}</p>
+        <p class="results">Favorite Language: {{fave_language}}</p>
+        <p class="results">Comments: {{commentbox}}</p>
+        <a href="/"><button style="background-color: darkslategray; color:blue; border:none; margin-bottom:20px">Go Back</button></a>
+    </div>
+
+</body>
+</html>

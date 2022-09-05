@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>dojo survey</title>
+    <style>
+        .container{
+            background-color:darkslategray;
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container bg-dark">
+        <form action="/submitted_page" method="post">
+            <p style="color: yellow; font-size:30px "">Dojo Survery</p>
+            <div class="form-group">
+                <label for="name_field">Name:</label>
+                <input type="text" class="form-control" id= "name_field" name="name_field">
+            </div>
+            <div class="form-group">
+                <label for="location_dropdown">Locations:</label>
+                <select class="form-control" id="location_dropdown" name="location_dropdown">
+                    <option value="choose-location">--Select a Location--</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="Seattle">Seattle</option>
+                    <option value="Online">Online</option>
+                    <option value="Burbank">Burbank</option>
+                    <option value="Bellevue">Bellevue</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="fave_language">Favorite Language:</label>
+                <select class="form-control id="fave_language" name="fave_language">
+                    <option value="choose-language">--Select a Language--</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Python">Python</option>
+                    <option value="C#">C#</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="commentbox">Comments:</label>
+                <textarea class="form-control" name="commentbox" id="commentbox" cols="30" rows="10"></textarea>
+            </div>
+            <button type="Submit" style="background-color:yellow;color:black; margin-bottom: 30px; " ">Submit</button>
+          </form>
+
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
