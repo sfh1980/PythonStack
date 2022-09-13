@@ -1,0 +1,22 @@
+steps for full stack
+
+
+*setting up mysql*
+1) look at wireframe. whats form look like? ERD should look like form
+2) create ERD with needed tables
+3) forward engineer to create schema
+_____________________________________________
+*setting up project folder*
+4)open VS Code
+5) create project folder
+6) cd into project folder
+7) install virtualenv and dependencies
+    ex) python -m pipenv install flask pymysql bcrypt
+8) run shell. NOTE: you should see in terminal 
+_______________________________________________________
+*modularizing project folder*
+9) create server.py in root project folder (outside of "flask_app")
+    NOTE: project folder should have root folder, pipfile, pipfile.lock, server.py
+10) create flask_app folder in root project folder
+11) within flask_app, create __init__.py file
+12) create needed folders in flask_app :config, controllers, models, templates
