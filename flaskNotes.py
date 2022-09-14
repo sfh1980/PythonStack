@@ -98,4 +98,11 @@ app.secret_key = "somebody_watching_me"
 # def connectToMySQL(db):
 #     return MySQLConnection(db)
 
+# EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$') 
+#patter validation for email addresses
+# import re for EMAIL_REGEX
+
+
+
+
 #     >>>>>>>>>>>>>>>>>>>>>>>>
