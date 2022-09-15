@@ -103,6 +103,7 @@ app.secret_key = "somebody_watching_me"
 # import re for EMAIL_REGEX
 
 
-
+#MAYBE< MAYBE NOT
+#<td class="text-light">{{sight.disbeliever[0]['num_disbeliever']}}</td>
 
 #     >>>>>>>>>>>>>>>>>>>>>>>>

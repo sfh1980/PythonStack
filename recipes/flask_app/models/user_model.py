@@ -1,7 +1,7 @@
 from flask_app.config.mysqlconnection import connectToMySQL
 from flask_app import DATABASE
 from flask import flash
-from flask_app.models import party_model
+from flask_app.models import recipe_model
 import re
 EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$') 
 
@@ -27,31 +27,28 @@ class User:
         if len(results) < 1:
             return False
         return cls(results[0])
-        #if email not found (result less than 1), sends back False. if it finds it, sends back user.
 
     @classmethod
     def get_by_id(cls,data):
-        query = "SELECT * FROM users LEFT JOIN parties on users.id = parties.user_id WHERE users.id = %(id)s;"
+        query = "SELECT * FROM users LEFT JOIN recipes on users.id = recipes.user_id WHERE users.id = %(id)s;"
         results = connectToMySQL(DATABASE).query_db(query, data)
         if len(results) < 1:
             return False
         user = cls(results[0])
-        list_of_parties = []
+        list_of_recipes = []
         for row in results:
-            if row['parties.id'] == None:
+            if row['recipes.id'] == None:
                 break
-            party_data = {
+            recipe_data = {
                 **row,
-                'id': row['parties.id'],
-                'created_at': row['parties.id'],
-                'updated_at': row['parties.id']
+                'id': row['recipes.id'],
+                'created_at': row['recipes.id'],
+                'updated_at': row['recipes.id']
             }
-            this_party = party_model.Party(party_data)
-            list_of_parties.append(this_party)
-        user.parties = list_of_parties
+            this_recipe = recipe_model.Recipe(recipe_data)
+            list_of_recipes.append(this_recipe)
+        user.recipes = list_of_recipes
         return user
-
-
 
     @staticmethod
     def validate(user_data):
